@@ -1,17 +1,19 @@
+//import area
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+//create an functional Component
+function MyElement(){
+    //A Functional Component always return HTML (JSX)
+    return<button onDoubleClick={console.log('Clicked')}>Submit!</button>
+}
+//lets Define a function
+function hello(){
+    alert('Hello React');
+}
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+//lets Create an element inside a constant
+const x = <button onDoubleClick={hello}>Submit!</button>
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+ReactDOM.render(x,document.getElementById('root'));
